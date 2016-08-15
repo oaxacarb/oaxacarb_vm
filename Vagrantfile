@@ -6,7 +6,9 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = 'oaxacarb'
   config.vm.box_url = "ubuntu/xenial32"
 
-  config.vm.network :private_network, ip: "10.10.10.1"
+  config.vm.provision "shell", path: "oaxacarb.sh", privileged: false
+
+  config.vm.network :private_network, ip: "10.10.10.5"
 
   config.vm.provider :virtualbox do |v|
     v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
