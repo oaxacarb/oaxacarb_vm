@@ -18,4 +18,18 @@ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 sudo chsh -s /bin/zsh ubuntu 
 zsh
 
+# Install Java
+sudo apt-get install default-jdk
 
+# Install Oracle Java
+sudo add-apt-repository -y ppa:webupd8team/java
+sudo apt-get -y update
+echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
+sudo apt-get -y install oracle-java8-installer
+
+# Install Elixir
+
+wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb
+sudo apt-get -y update
+sudo apt-get -y install esl-erlang
+sudo apt-get -y install elixir
