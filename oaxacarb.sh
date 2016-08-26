@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Installation as superuser
-
+sudo apt-get -y install build-essential
 sudo apt-get -y install language-pack-es
 sudo apt-get -y install tmux
 sudo apt-get -y install zsh curl
@@ -28,8 +28,20 @@ echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | 
 sudo apt-get -y install oracle-java8-installer
 
 # Install Elixir
-
 wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb
 sudo apt-get -y update
 sudo apt-get -y install esl-erlang
 sudo apt-get -y install elixir
+
+# Install phyton 
+sudo apt-get -y install python2.7-testtools
+
+# Install nodejs
+curl -sL https://deb.nodesource.com/setup | sudo bash -
+sudo apt-get -y install nodejs
+
+
+# Install PHP 
+sudo apt-get -y install php
+sudo apt-get -y install php-phar
+sudo apt-get -y install phpunit
