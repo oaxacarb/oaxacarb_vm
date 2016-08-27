@@ -36,10 +36,12 @@ sudo apt-get -y install elixir
 # Install phyton 
 sudo apt-get -y install python2.7-testtools
 
-# Install nodejs
-curl -sL https://deb.nodesource.com/setup | sudo bash -
-sudo apt-get -y install nodejs
-
+# Install nodejs with nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.6/install.sh | bash
+echo "source /home/ubuntu/.nvm/nvm.sh" >> /home/ubuntu/.profile
+source /home/ubuntu/.profile
+nvm install v6.4.0
+nvm alias default v6.4.0
 
 # Install PHP 
 sudo apt-get -y install php
